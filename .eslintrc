@@ -1,0 +1,6 @@
+---
+extends: kevoree
+parserOptions:
+  ecmaVersions: 2017
+rules:
+  no-console: 0

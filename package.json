@@ -1,0 +1,31 @@
+{
+  "name": "nawm",
+  "version": "1.0.0",
+  "description": "Not A Weird Machine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxleiko/nawm.git"
+  },
+  "keywords": [
+    "web",
+    "server"
+  ],
+  "author": "Maxime Tricoire <max.tricoire@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxleiko/nawm/issues"
+  },
+  "homepage": "https://github.com/maxleiko/nawm#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mathjs": "^3.17.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-kevoree": "^1.0.1"
+  }
+}
