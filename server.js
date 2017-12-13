@@ -1,18 +1,19 @@
 const express = require('express');
-const authService = require('./services/auth.js');
+
+const authMiddleware = require('./middlewares/auth.js');
 const login = require('./routes/login');
 const compute = require('./routes/compute');
 
-const app = express();
-const USERS = {
-  admin: 'admin'
-};
+const USERS = { admin: 'admin' };
 const TOKENS = {};
+const TTL = 1000 * 60 * 15; // 15 minutes
+
+const app = express();
 
 app.use(express.json());
-app.use(authService(TOKENS));
+app.use(authMiddleware(TOKENS));
 
-app.post('/login', login(USERS, TOKENS));
+app.post('/login', login(USERS, TOKENS, TTL));
 app.post('/compute', compute());
 
 app.listen(8080, () => {
